@@ -4,6 +4,7 @@ PFont font;
 String totaal1 = "";
 String totaal2 = "";
 String totaal3 = "";
+String totaal5 = "";
 float totaal4;
 
 Button knop1;
@@ -139,6 +140,7 @@ text("^ Select first value ^",20,100);
 text("^ x of + of / of - ^", 30,200);
 text("^ Select second value ^",15,300);
 text("BACK = Full Refresh",150,900);
+text(totaal5,2000,2000);
 }
 
 void Knop1(){ 
@@ -239,22 +241,30 @@ totaal3 = "";
 }
 
 void Knopmin(){
+if(totaal2 == ""){
 totaal2= "-";
-text(totaal2,40,150);
+text(totaal2,40,150);}
+else{totaal5 = "-";}
 }
 
 void Knopplus(){
+if(totaal2 == ""){ 
 totaal2= "+";
-text(totaal2,40,150);
+text(totaal2,40,150);} 
+else{totaal5 = "+";}
 }
 void Knopgedeeld(){
+if(totaal2 == ""){
 totaal2= "/";
-text(totaal2,40,150);
+text(totaal2,40,150);}
+else{totaal5 = "/";}
 }
 
 void Knopkeer(){
+if(totaal2==""){
 totaal2="x";
-text(totaal2,40,150);
+text(totaal2,40,150);}
+else{totaal5="x";}
 }
 
 
